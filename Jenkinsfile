@@ -1,8 +1,7 @@
 pipeline{
 	agent any
 	
-	stages{
-		
+	stages{	
 		stage('Checkout'){
 			steps{
 				git branch: 'master', url: https://github.com/KumaresanGanesh/git-learning.git
@@ -15,7 +14,7 @@ pipeline{
 			}
 		}
 		
-		stage('Run'){
+		stage('Test'){
 			steps{
 				sh 'java -cp target/classes myProject.jenkins.App'
 			}
