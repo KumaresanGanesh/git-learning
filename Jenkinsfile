@@ -10,13 +10,13 @@ pipeline{
 		
 		stage('Build & Test'){
 			steps{
-				sh'mvn clean test'
+				bat'mvn clean test'
 			}
 		}
 		
 		stage('Run'){
 			steps{
-				sh 'java -cp target/classes myProject.Jenkins.App'
+				bat'java -cp target/classes myProject.Jenkins.App'
 			}
 			
 			}
