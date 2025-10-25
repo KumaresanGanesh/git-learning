@@ -8,15 +8,15 @@ pipeline{
 			}
 		}
 		
-		stage('Build'){
+		stage('Build & Test'){
 			steps{
-				sh'mvn clean compile'
+				sh'mvn clean test'
 			}
 		}
 		
 		stage('Run'){
 			steps{
-				sh 'java -cp target/classes myProject.jenkins.App'
+				sh 'java -cp target/classes myProject.Jenkins.App'
 			}
 			
 			}
