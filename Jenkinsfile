@@ -20,15 +20,13 @@ pipeline{
 				sh 'java -cp target/classes myProject.jenkins.App'
 			}
 			
-			post{
-				always{
-					junit 'target/surefire-reports/*.xml'
-				}
 			}
 		}
-	}
-	
+		
 	post{
+		always{
+			junit 'target/surefire-reports/*.xml'
+		}
 		success{
 			echo 'Build and test Successfull'
 		}
