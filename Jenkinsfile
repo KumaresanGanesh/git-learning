@@ -14,7 +14,7 @@ pipeline{
 			}
 		}
 		
-		stage('Test'){
+		stage('Run'){
 			steps{
 				sh 'java -cp target/classes myProject.jenkins.App'
 			}
